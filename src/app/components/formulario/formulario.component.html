@@ -1,0 +1,75 @@
+
+
+<alert-app *ngIf="warning"
+[mensaje]="mensaje"
+
+></alert-app>
+
+    <form id="form" class=mb-5>
+        <div class="form-group row">
+            <div class="col-12">
+                <input type="text" class="form-control" id="nombreTarea" name="nombreTarea"
+                   placeholder="Escriba su nickname"
+                   [(ngModel)]="nickname"
+                   ngModel maxlength="8"
+                   #name="ngModel"/>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <div class="col-12">
+                <textarea rows="5" cols="50" class="form-control" id="descripcionTarea" name="descripcionTarea"
+                    placeholder="Escriba un mensaje"
+                    [(ngModel)]="descripcion"
+                    ngModel maxlength="120"
+                    #name="ngModel"
+                    ></textarea>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <div class="col-12">
+                <select class="form-control" id="prioridad" name="prioridad" 
+                [(ngModel)]="selection"
+                    #name="ngModel"
+                >
+                        <option>Ninguno</option>
+                        <option>Johnny Lawrence</option>
+                        <option>Daniel LaRusso</option>
+                </select>
+            </div>
+        </div>
+          <div class="mt-4">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="-1"
+                [(ngModel)]="radio"
+                    #name="ngModel"
+                >
+                <label class="form-check-label" for="inlineRadio1">-1</label>
+            </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="0"
+                [(ngModel)]="radio"
+                    #name="ngModel">
+                <label class="form-check-label" for="inlineRadio2">0</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="1"
+                [(ngModel)]="radio"
+                    #name="ngModel">
+                <label class="form-check-label" for="inlineRadio3">1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="2"
+                [(ngModel)]="radio"
+                    #name="ngModel">
+                <label class="form-check-label" for="inlineRadio4">2</label>
+              </div>
+          </div>
+        
+        <div class="form-group row mt-3">
+            <div class="offset-12 col-md-6">
+                <button class="btn btn-dark"
+                (click)="submit()"
+                >Enviar</button>
+            </div>
+        </div>
+</form>

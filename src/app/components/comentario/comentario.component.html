@@ -1,0 +1,13 @@
+<div class="card " style="width: 18rem;">
+    <div class="card-body text-center">
+        <h4 class="card-title">Comentarios</h4>
+    </div>
+    <div class="comment-widgets">
+        <div class="d-flex flex-row comment-row m-t-0" *ngFor="let comentario of comentarios">
+            <div class="comment-text w-100">
+                <h6 class="font-medium singlecomenttitle">{{comentario.nickname}}</h6>
+                <span class="m-b-15 d-block">{{comentario.descripcion}} </span>
+            </div>
+        </div>
+    </div>
+  </div>
